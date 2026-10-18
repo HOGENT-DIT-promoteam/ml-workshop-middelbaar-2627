@@ -603,34 +603,22 @@ Zet eerst een GPU aan: **Runtime → Runtimetype wijzigen → T4 GPU**.
 
 | Deel | Onderwerp | Bouwsteen |
 |---|---|---|
-| A | Data bekijken & normaliseren | 1. Input |
-| B | Zelf een filter uitproberen | 2. Convolutie |
-| C | Gewoon neuraal netwerk als vergelijking | |
-| D | Zelf een CNN bouwen en trainen | 2 – 6 |
-| E | Evalueren: accuracy & confusion matrix | |
-| F | Feature maps bekijken | 2. Convolutie |
-| G | Uitdaging: beter model & je eigen hand | |
+| A | Data inlezen & normaliseren | 1. Input |
+| B | Zelf een CNN bouwen en trainen | 2 – 6 |
+| C | Evalueren: accuracy & confusion matrix | |
+| D | Uitdaging: beter model & je eigen hand | |
 
-Vul telkens de cellen met `# TODO` aan.
+De data inlezen staat klaar; de rest schrijf je zelf, met je MNIST-notebook als voorbeeld.
 
 ## Conclusie Steen, Papier, Schaar
 
-- Een CNN haalt een veel betere accuracy dan een gewoon neuraal netwerk, met **minder** parameters.
-  - Bv. gewoon netwerk: ±67% met 3,8 miljoen parameters; CNN: ±85% met 430 000 parameters.
+- Een CNN haalt ±85% accuracy met 430 000 parameters.
+  - Een gewoon netwerk heeft met één `Dense(128)`-laag al 3,8 miljoen parameters, en doet het slechter.
 - **Overfitting**: bijna 100% op de trainingsset, minder op de testset.
   - Oplossingen: data-augmentatie (spiegelen, draaien, zoomen) en dropout $\implies$ ±95%.
-- De eerste lagen leren zelf **randdetectoren**, net zoals de filters die je zelf maakte.
+- De eerste lagen leren zelf **randdetectoren**; diepere lagen reageren op vormen.
 - Een model is maar zo goed als zijn data: getraind op computergegenereerde handen
   $\implies$ moeite met echte foto's.
-
-## Bonus: Schaakstukken herkennen ♟️
-
-Open de notebook `CNN_Schaakstukken.ipynb`:
-[👉 Open in Colab](https://colab.research.google.com/github/HoGentTIN/ml-workshop-middelbaar-2627/blob/main/notebooks/CNN_Schaakstukken.ipynb)
-
-- Een schaakbord = $8 \times 8 = 64$ kleine afbeeldingen.
-- Je bouwt zelf een CNN dat elk vakje herkent: leeg, of één van de 12 stukken.
-- Daarna "leest" je model een volledig bord en schrijft het de stelling uit in **FEN**-notatie.
 
 ## AlexNet: Architectuur {visibility="hidden"}
 

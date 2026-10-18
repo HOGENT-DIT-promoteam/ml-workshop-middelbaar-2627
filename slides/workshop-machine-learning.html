@@ -4287,65 +4287,41 @@ ENNUI gebruikt een oudere versie van Keras. Vervang <code>lr=</code> door <code>
 <tbody>
 <tr class="odd">
 <td>A</td>
-<td>Data bekijken &amp; normaliseren</td>
+<td>Data inlezen &amp; normaliseren</td>
 <td>1. Input</td>
 </tr>
 <tr class="even">
 <td>B</td>
-<td>Zelf een filter uitproberen</td>
-<td>2. Convolutie</td>
-</tr>
-<tr class="odd">
-<td>C</td>
-<td>Gewoon neuraal netwerk als vergelijking</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>D</td>
 <td>Zelf een CNN bouwen en trainen</td>
 <td>2 – 6</td>
 </tr>
 <tr class="odd">
-<td>E</td>
+<td>C</td>
 <td>Evalueren: accuracy &amp; confusion matrix</td>
 <td></td>
 </tr>
 <tr class="even">
-<td>F</td>
-<td>Feature maps bekijken</td>
-<td>2. Convolutie</td>
-</tr>
-<tr class="odd">
-<td>G</td>
+<td>D</td>
 <td>Uitdaging: beter model &amp; je eigen hand</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p>Vul telkens de cellen met <code># TODO</code> aan.</p>
+<p>De data inlezen staat klaar; de rest schrijf je zelf, met je MNIST-notebook als voorbeeld.</p>
 </section>
 <section id="conclusie-steen-papier-schaar" class="slide level2">
 <h2>Conclusie Steen, Papier, Schaar</h2>
 <ul>
-<li>Een CNN haalt een veel betere accuracy dan een gewoon neuraal netwerk, met <strong>minder</strong> parameters.
+<li>Een CNN haalt ±85% accuracy met 430 000 parameters.
 <ul>
-<li>Bv. gewoon netwerk: ±67% met 3,8 miljoen parameters; CNN: ±85% met 430 000 parameters.</li>
+<li>Een gewoon netwerk heeft met één <code>Dense(128)</code>-laag al 3,8 miljoen parameters, en doet het slechter.</li>
 </ul></li>
 <li><strong>Overfitting</strong>: bijna 100% op de trainingsset, minder op de testset.
 <ul>
 <li>Oplossingen: data-augmentatie (spiegelen, draaien, zoomen) en dropout <span class="math inline">\(\implies\)</span> ±95%.</li>
 </ul></li>
-<li>De eerste lagen leren zelf <strong>randdetectoren</strong>, net zoals de filters die je zelf maakte.</li>
+<li>De eerste lagen leren zelf <strong>randdetectoren</strong>; diepere lagen reageren op vormen.</li>
 <li>Een model is maar zo goed als zijn data: getraind op computergegenereerde handen <span class="math inline">\(\implies\)</span> moeite met echte foto’s.</li>
-</ul>
-</section>
-<section id="bonus-schaakstukken-herkennen" class="slide level2">
-<h2>Bonus: Schaakstukken herkennen ♟️</h2>
-<p>Open de notebook <code>CNN_Schaakstukken.ipynb</code>: <a href="https://colab.research.google.com/github/HoGentTIN/ml-workshop-middelbaar-2627/blob/main/notebooks/CNN_Schaakstukken.ipynb">👉 Open in Colab</a></p>
-<ul>
-<li>Een schaakbord = <span class="math inline">\(8 \times 8 = 64\)</span> kleine afbeeldingen.</li>
-<li>Je bouwt zelf een CNN dat elk vakje herkent: leeg, of één van de 12 stukken.</li>
-<li>Daarna “leest” je model een volledig bord en schrijft het de stelling uit in <strong>FEN</strong>-notatie.</li>
 </ul>
 </section>
 
