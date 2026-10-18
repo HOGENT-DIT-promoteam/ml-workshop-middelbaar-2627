@@ -1,0 +1,85 @@
+/*-- scss:defaults --*/
+
+// HoGent-kleuren (overgenomen uit beamerthemehogent.sty)
+$hgdarkgreen: rgb(22, 176, 165);
+$hgpink: rgb(241, 157, 160);
+$hgochre: rgb(250, 188, 50);
+$hgorange: rgb(239, 135, 103);
+$hgpurple: rgb(187, 144, 189);
+$hgblue: rgb(76, 162, 213);
+$hglightgreen: rgb(165, 202, 114);
+$hgbrown: rgb(216, 176, 131);
+$hggrey: rgb(195, 187, 175);
+$hgyellow: rgb(244, 222, 0);
+
+$font-family-sans-serif: "Montserrat", sans-serif;
+$font-family-monospace: "Fira Code", monospace;
+
+$body-bg: #fff;
+$body-color: #000;
+$link-color: $hgblue;
+$presentation-heading-color: #000;
+$presentation-heading-font-weight: 700;
+$presentation-font-size-root: 34px;
+
+/*-- scss:rules --*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Fira+Code&display=swap");
+
+.reveal .slide-logo {
+  max-height: 1.6em !important;
+}
+
+// Equivalent van beamer \begin{block}: gele titel op blauwe achtergrond
+.reveal .block {
+  background: $hgblue;
+  color: #fff;
+  border-radius: 6px;
+  margin: 0.5em 0;
+  padding: 0.4em 0.8em;
+
+  .block-title {
+    color: $hgyellow;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+  }
+
+  em {
+    font-weight: 700;
+  }
+
+  a {
+    color: $hgyellow;
+    text-decoration: underline;
+  }
+
+  code {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.18);
+    padding: 0 0.15em;
+    border-radius: 3px;
+  }
+}
+
+// Equivalent van \colorbox{yellow}{...}
+.reveal .highlight {
+  background: $hgyellow;
+  font-weight: 700;
+  font-size: 1.3em;
+  padding: 0 0.2em;
+}
+
+.reveal .bron {
+  font-size: 0.45em;
+  color: #555;
+  position: absolute;
+  bottom: 0;
+}
+
+.reveal .placeholder {
+  border: 2px dashed $hggrey;
+  color: #777;
+  font-size: 0.6em;
+  padding: 2em 1em;
+  text-align: center;
+}
