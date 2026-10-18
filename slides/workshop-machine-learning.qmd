@@ -186,10 +186,10 @@ Welke toepassingen van machinaal leren ken jij?
 
 ## Notebook Lineaire Regressie
 
-Open de Jupyter notebook `LineaireRegressie.ipynb` op Google Colab
-(<https://colab.research.google.com>).
+Open de Jupyter notebook `LineaireRegressie.ipynb` op Google Colab:
+[👉 Open in Colab](https://colab.research.google.com/github/HoGentTIN/ml-workshop-middelbaar-2627/blob/main/notebooks/LineaireRegressie.ipynb)
 
-Deze notebook is beschikbaar op <https://github.com/HoGentTIN/ml-workshop-middelbaar>
+Alle notebooks staan ook op <https://github.com/HoGentTIN/ml-workshop-middelbaar-2627>
 
 ## Lineaire Regressie
 
