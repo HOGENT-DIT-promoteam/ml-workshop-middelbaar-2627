@@ -220,7 +220,7 @@ Echter! Nog veel andere technieken nodig om dit praktisch te laten werken op ing
 ## (Binaire) classificatie
 
 - Bij **binaire classificatie** tracht men de invoer te classificeren als 1 van 2 mogelijke klassen.
-- Bv. spam of ham, kat of hond, of … <https://www.youtube.com/watch?v=tWwCK95X6go>
+- Bv. spam of ham, kat of hond, of … 
 - Bij **classificatie** zijn er meerdere klassen, bv. E-mails worden in verschillende
   folders geclassificeerd: "Primary", "Social", "Reclame".
 
